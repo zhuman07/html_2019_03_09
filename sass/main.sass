@@ -28,7 +28,121 @@ body textarea:required:valid
 	color: #666
 
 //Custom Styles Here
+.content
+	position: relative
+	background-color: $black
+	&.main
+		&:before
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			background-color: #000
+		.divider
+			height: 380px
+			&:before
+				background-color: $orange
 
+.content-bg-text
+	position: absolute
+	width: 100%
+	bottom: 20px
+	left: 0
+	line-height: 1
+	.content-bg-text-flex
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		span
+			font-family: $bb
+			font-size: 380px
+			color: $black2
+			text-transform: uppercase
+
+.divider
+	position: absolute
+	width: 100%
+	height: 60px
+	bottom: 0
+	left: 0
+	text-align: center
+	&:before
+		content: ''
+		display: inline-block
+		width: 2px
+		height: 100%
+		background-color: #fff
+
+#myVideo
+	min-height: 100%
+	min-width: 100%
+	position: relative
+	z-index: 0
+	opacity: .15
+
+.main-text
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	padding-top: 240px
+	.main-text-inner
+		text-align: right
+		font-family: $bb
+		font-size: 140px
+		text-transform: uppercase
+		padding-right: 70px
+		span
+			margin-right: 50px
+
+.content-team
+	padding: 150px 0 300px 0
+
+.content-team
+	.content-team-list
+		padding: 0 80px
+		.content-team-item
+			line-height: 1.1
+			float: left
+			width: 33.33%
+			padding: 0 20px
+			img
+				width: 150px
+				margin-bottom: 30px
+				filter: grayscale(100%)
+			h2
+				font-family: $br
+				font-size: 35px
+				text-transform: uppercase
+				margin: 0
+			p
+				font-family: $br
+				font-size: 25px
+				text-transform: uppercase
+				margin: 0
+				text-align: center
+			.item-social-links
+				margin-top: 20px
+				a
+					display: inline-block
+					margin-right: 15px
+					&:hover
+						opacity: .6
+					span.social-icon
+						display: inline-block
+						width: 25px
+						height: 25px
+						background-repeat: no-repeat
+						background-position: 50% 50%
+						background-size: cover
+						&.in
+							background-image: url('../img/icons/1.png')
+						&.fb
+							background-image: url('../img/icons/2.png')
 
 //ALWAYS END
 @import "media"
