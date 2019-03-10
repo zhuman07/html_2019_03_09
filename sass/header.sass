@@ -51,6 +51,9 @@ header
 				left: 0
 				background-color: $orange
 				transition: all .5s ease
+			&.active
+				&:after
+					width: 100%
 			&:hover
 				&:after
 					width: 100%
@@ -122,6 +125,9 @@ footer
 				left: 0
 				background-color: $orange
 				transition: all .5s ease
+			&.active
+				&:after
+					width: 100%
 			&:hover
 				&:after
 					width: 100%
@@ -132,9 +138,9 @@ footer
 .phone-icon
 	display: none
 	position: fixed
-	right: 20px
+	right: 30px
 	bottom: 40px
-	z-index: 2
+	z-index: 5
 	span
 		display: block
 		width: 45px

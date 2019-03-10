@@ -18,6 +18,10 @@
 		.main-text-inner
 			padding-right: 0
 
+	.vacancy-slider-block
+		.vacancy-slider-arrows
+			left: 30px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
@@ -36,6 +40,75 @@
 				margin-bottom: 50px
 				float: none
 				width: 100%
+
+	.vacancy-slider-block
+		padding: 100px 0
+		.vacancy-slider
+			left: 0
+			margin: 0 0
+			.vacancy-slider-item
+				img
+					height: 200px
+					right: -15px
+				.vacancy-slider-item-text
+					h2
+						font-size: 40px
+					table
+						margin: 40px 0 20px 0
+						tr
+							td
+								padding: 0 20px 10px 0
+
+	.content
+		overflow-x: hidden
+
+	.vacancy-full-data
+		.vacancy-data-item
+			padding: 150px 30px 50px 30px
+			.vacancy-data-item-close
+				right: 30px
+			.vacancy-data-item-logo
+				text-align: left
+				img
+					left: 30px
+
+	.vacancy-data-item-content
+		h4
+			max-width: 100%
+		h2
+			font-size: 30px
+		h3
+			font-size: 20px
+		ul
+			li
+				font-size: 12px
+		.content-half
+			float: none
+			width: 100%
+			margin-right: 0
+
+	.map-info
+		top: 100px
+		padding: 50px 30px
+		&:after
+			left: 30px
+			bottom: 0
+		.map-email
+			font-size: 30px
+		p
+			font-size: 20px
+			margin: 10px 0
+		.map-center-text
+			text-align: center
+			margin-top: 80px
+			span
+				font-size: 25px
+				left: 70px
+		.map-center-point
+			top: 100px
+			&:after
+				width: 120px
+				height: 120px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -62,6 +135,30 @@
 
 	.mob-menu-icon
 		display: block
+
+	.map
+		margin-top: 130px
+
+	.map-info
+		top: 20px
+		padding: 0 15px
+		height: 100%
+		&:after
+			display: none
+		.map-email
+			font-size: 20px
+		p
+			font-size: 15px
+		.map-center-text
+			margin-top: 15%
+			span
+				font-size: 18px
+				left: 50px
+		.map-center-point
+			top: 40%
+			&:after
+				width: 50px
+				height: 50px
 	
 	/*Disable Animation on Mobile Devices*/
 	.animated
@@ -88,7 +185,20 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
-
+	.map-info
+		.map-email
+			font-size: 16px
+		p
+			font-size: 12px
+		.map-center-text
+			margin-top: 15%
+			span
+				font-size: 14px
+		.map-center-point
+			top: 30%
+			&:after
+				width: 40px
+				height: 40px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

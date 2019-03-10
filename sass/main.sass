@@ -5,144 +5,371 @@
 @import "app/libs/animate/animate.sass"
 
 *::-webkit-input-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 *:-moz-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 *::-moz-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #666
+  color: #666
+
 body input:required:valid,
 body textarea:required:valid
-	color: #666
+  color: #666
 
 //Custom Styles Here
 .content
-	position: relative
-	background-color: $black
-	&.main
-		&:before
-			content: ''
-			display: block
-			width: 100%
-			height: 100%
-			position: absolute
-			top: 0
-			left: 0
-			background-color: #000
-		.divider
-			height: 380px
-			&:before
-				background-color: $orange
+  position: relative
+  background-color: $black
+  &.main
+    &:before
+      content: ''
+      display: block
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background-color: #000
+    .divider
+      height: 380px
+      &:before
+        background-color: $orange
 
 .content-bg-text
-	position: absolute
-	width: 100%
-	bottom: 20px
-	left: 0
-	line-height: 1
-	.content-bg-text-flex
-		display: flex
-		flex-direction: row
-		justify-content: space-between
-		span
-			font-family: $bb
-			font-size: 380px
-			color: $black2
-			text-transform: uppercase
+  position: absolute
+  width: 100%
+  bottom: 20px
+  left: 0
+  line-height: 1
+  .content-bg-text-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    span
+      font-family: $bb
+      font-size: 380px
+      color: $black2
+      text-transform: uppercase
 
 .divider
-	position: absolute
-	width: 100%
-	height: 60px
-	bottom: 0
-	left: 0
-	text-align: center
-	&:before
-		content: ''
-		display: inline-block
-		width: 2px
-		height: 100%
-		background-color: #fff
+  position: absolute
+  width: 100%
+  height: 60px
+  bottom: 0
+  left: 0
+  text-align: center
+  &:before
+    content: ''
+    display: inline-block
+    width: 2px
+    height: 100%
+    background-color: #fff
 
 #myVideo
-	min-height: 100%
-	min-width: 100%
-	position: relative
-	z-index: 0
-	opacity: .15
+  min-height: 100%
+  min-width: 100%
+  position: relative
+  z-index: 0
+  opacity: .15
 
 .main-text
-	position: absolute
-	top: 0
-	left: 0
-	width: 100%
-	height: 100%
-	padding-top: 240px
-	.main-text-inner
-		text-align: right
-		font-family: $bb
-		font-size: 140px
-		text-transform: uppercase
-		padding-right: 70px
-		span
-			margin-right: 50px
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  padding-top: 240px
+  .main-text-inner
+    text-align: right
+    font-family: $bb
+    font-size: 140px
+    text-transform: uppercase
+    padding-right: 70px
+    span
+      margin-right: 50px
 
 .content-team
-	padding: 150px 0 300px 0
+  padding: 150px 0 300px 0
 
 .content-team
-	.content-team-list
-		padding: 0 80px
-		.content-team-item
-			line-height: 1.1
-			float: left
-			width: 33.33%
-			padding: 0 20px
-			img
-				width: 150px
-				margin-bottom: 30px
-				filter: grayscale(100%)
-			h2
-				font-family: $br
-				font-size: 35px
-				text-transform: uppercase
-				margin: 0
-			p
-				font-family: $br
-				font-size: 25px
-				text-transform: uppercase
-				margin: 0
-				text-align: center
-			.item-social-links
-				margin-top: 20px
-				a
-					display: inline-block
-					margin-right: 15px
-					&:hover
-						opacity: .6
-					span.social-icon
-						display: inline-block
-						width: 25px
-						height: 25px
-						background-repeat: no-repeat
-						background-position: 50% 50%
-						background-size: cover
-						&.in
-							background-image: url('../img/icons/1.png')
-						&.fb
-							background-image: url('../img/icons/2.png')
+  .content-team-list
+    padding: 0 80px
+    .content-team-item
+      line-height: 1.1
+      float: left
+      width: 33.33%
+      padding: 0 20px
+      img
+        width: 150px
+        margin-bottom: 30px
+        filter: grayscale(100%)
+      h2
+        font-family: $br
+        font-size: 35px
+        text-transform: uppercase
+        margin: 0
+      p
+        font-family: $br
+        font-size: 25px
+        text-transform: uppercase
+        margin: 0
+        text-align: center
+      .item-social-links
+        margin-top: 20px
+        a
+          display: inline-block
+          margin-right: 15px
+          &:hover
+            opacity: .6
+          span.social-icon
+            display: inline-block
+            width: 25px
+            height: 25px
+            background-repeat: no-repeat
+            background-position: 50% 50%
+            background-size: cover
+            &.in
+              background-image: url('../img/icons/1.png')
+            &.fb
+              background-image: url('../img/icons/2.png')
+
+.vacancy-slider-block
+  padding: 170px 0
+  .vacancy-slider-arrows
+    position: absolute
+    bottom: 50px
+    left: 220px
+    width: 250px
+    z-index: 2
+    span
+      display: inline-block !important
+      width: 60px
+      height: 25px
+      background-repeat: no-repeat
+      background-position: 50% 50%
+      cursor: pointer
+      margin-right: 40px
+      background-size: cover
+    .left-arrow
+      background-image: url('../img/icons/arrow-left.png')
+    .right-arrow
+      background-image: url('../img/icons/arrow-right.png')
+  .vacancy-slider
+    overflow: hidden
+    position: relative
+    left: 180px
+    margin: 0 -30px
+    .slick-current
+      background-color: #000
+    .vacancy-slider-item
+      cursor: pointer
+      display: inline-block
+      position: relative
+      padding: 35px
+      line-height: 1
+      margin: 0 30px
+      //width: 440px !important
+      img
+        height: 300px
+        position: absolute
+        top: 20%
+        right: -30px
+      .vacancy-slider-item-text
+        position: relative
+        z-index: 1
+        h2
+          font-family: $bb
+          text-transform: uppercase
+          font-size: 70px
+          margin: 0
+        table
+          border: none
+          margin: 70px 0 50px 0
+          tr
+            td
+              padding: 0 50px 20px 0
+              font-size: 14px
+              span.table-plus
+                color: $orange
+              span.wide-text
+                display: inline-block
+                width: 200px
+
+.vacancy-full-data
+  .vacancy-data-item
+    display: none
+    position: absolute
+    width: 100%
+    height: auto
+    background-color: #322a1a
+    top: 0
+    left: 0
+    z-index: 3
+    padding: 50px 150px
+    &.active
+      display: block
+    .vacancy-data-item-close
+      position: absolute
+      top: 50px
+      right: 200px
+      cursor: pointer
+      z-index: 2
+      img
+        width: 40px
+    .vacancy-data-item-logo
+      position: absolute
+      top: 50px
+      width: 100%
+      text-align: center
+      left: 0
+      z-index: 1
+      img
+        max-width: 130px
+        position: relative
+        left: 30px
+
+.vacancy-data-item-content
+  &:after
+    content: ''
+    display: block
+    clear: both
+  h4
+    font-size: 14px
+    opacity: .2
+    max-width: 400px
+    margin: 0
+    line-height: 1.4
+  h2
+    font-family: $br
+    text-transform: uppercase
+    font-size: 60px
+    margin: 30px 0 10px 0
+  h3
+    font-family: $br
+    text-transform: uppercase
+    font-size: 30px
+    margin: 0
+    line-height: 1
+  ul
+    padding: 0 0 0 15px
+    margin: 20px 0 40px 0
+    li
+      font-size: 14px
+      margin: 5px 0
+  .content-half
+    float: left
+    width: 47%
+    margin-right: 6%
+    &:last-child
+      margin-right: 0
+
+.vacancy-apply-btn
+  font-family: $br
+  font-size: 40px
+  color: $orange
+  position: relative
+  display: inline-block
+  &:after
+    content: ''
+    display: block
+    width: 100%
+    height: 2px
+    background-color: $orange
+    position: absolute
+  &:hover
+    color: $orange
+    &:after
+      display: none
+
+.map
+  position: relative
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,.8)
+  img
+    width: 100%
+
+.map-info
+  position: absolute
+  width: 100%
+  left: 0
+  top: 180px
+  padding: 0 230px
+  line-height: 1.1
+  &:after
+    content: ''
+    position: absolute
+    display: inline-block
+    width: 50px
+    height: 4px
+    background-color: $orange
+    left: 230px
+    bottom: -150px
+  .map-email
+    font-family: $br
+    text-transform: uppercase
+    color: $orange
+    font-size: 60px
+    display: inline-block
+    position: relative
+    &:hover
+      opacity: .6
+    &:after
+      content: ''
+      display: block
+      width: 100%
+      height: 3px
+      background-color: $orange
+      position: absolute
+      bottom: 0
+      left: 0
+  p
+    font-family: $br
+    font-size: 40px
+    text-transform: uppercase
+    margin: 20px 0
+  .map-center-text
+    text-align: center
+    margin-top: 100px
+    span
+      font-family: $br
+      font-size: 50px
+      text-transform: uppercase
+      position: relative
+      left: 100px
+  .map-center-point
+    position: absolute
+    display: block
+    width: 100%
+    left: 0
+    top: 110px
+    text-align: center
+    &:after
+      content: ''
+      display: inline-block
+      width: 170px
+      height: 170px
+      background-image: url("../img/icons/map-center.png")
+      background-repeat: no-repeat
+      background-position: 50% 50%
+      background-size: cover
+
 
 //ALWAYS END
 @import "media"

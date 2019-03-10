@@ -89,8 +89,36 @@ $(function() {
         }
     });
 
-    $('#wrapper').css('min-height', $(window).height());
+    $('.content').css('min-height', $(window).height());
 
     $('.main').height($(window).height()).css('overflow', 'hidden');
+
+    $('.vacancy-slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: $('.vacancy-slider-arrows .left-arrow'),
+        nextArrow: $('.vacancy-slider-arrows .right-arrow'),
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+        ]
+    });
+
+    $('.vacancy-slider-item').click(function () {
+        var id = $(this).data('id');
+        $('.vacancy-data-item[data-id="'+id+'"]').addClass('active');
+    });
+
+    $('.vacancy-data-item .vacancy-data-item-close').click(function () {
+        $('.vacancy-data-item').removeClass('active');
+    })
+
+
 
 });
