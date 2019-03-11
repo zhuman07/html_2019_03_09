@@ -33,6 +33,8 @@ body textarea:required:valid
   position: relative
   background-color: $black
   &.main
+    max-height: 680px
+    overflow: hidden
     &:before
       content: ''
       display: block
@@ -43,7 +45,7 @@ body textarea:required:valid
       left: 0
       background-color: #000
     .divider
-      height: 380px
+      height: 58%
       &:before
         background-color: $orange
 
@@ -77,6 +79,39 @@ body textarea:required:valid
     height: 100%
     background-color: #fff
 
+.divider-top
+  position: absolute
+  width: 100%
+  height: 60px
+  top: 25%
+  left: 0
+  text-align: right
+  padding-right: 28%
+  &:before
+    content: ''
+    display: inline-block
+    width: 2px
+    height: 100%
+    background-color: $orange
+
+.divider-left, .divider-right
+  position: absolute
+  width: 100%
+  height: 32%
+  bottom: 0
+  left: 0
+  padding-left: 28%
+  &:before
+    content: ''
+    display: inline-block
+    width: 2px
+    height: 100%
+    background-color: $orange
+
+.divider-right
+  text-align: right
+  padding-right: 28%
+
 #myVideo
   min-height: 100%
   min-width: 100%
@@ -90,7 +125,7 @@ body textarea:required:valid
   left: 0
   width: 100%
   height: 100%
-  padding-top: 240px
+  padding-top: 17%
   .main-text-inner
     text-align: right
     font-family: $bb

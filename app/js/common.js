@@ -91,7 +91,10 @@ $(function() {
 
     $('.content').css('min-height', $(window).height());
 
-    $('.main').height($(window).height()).css('overflow', 'hidden');
+    if($(window).width() < 1200){
+        $('.main').height($(window).height()).css('overflow', 'hidden');
+    }
+    //$('.main').height($(window).height()).css('overflow', 'hidden');
 
     $('.vacancy-slider').slick({
         infinite: true,
